@@ -19,6 +19,12 @@ export default function Home() {
   const [status, setStatus] = useState<
     "idle" | "submitting" | "success" | "error"
   >("idle");
+  const testimonials = [
+    { id: 1, name: "Bubble Skincare", file: "p_testimonial1" },
+    { id: 2, name: "Haruharu Wonder", file: "p_testimonial2" },
+    { id: 3, name: "Anua Skincare Set", file: "p_testimonial3" },
+    { id: 4, name: "Dove Beauty", file: "p_testimonial4" },
+  ];
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -376,24 +382,24 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[1, 2, 3, 4].map((item) => (
+            {testimonials.map((t) => (
               <div
-                key={item}
+                key={t.id}
                 className="bg-black rounded-3xl overflow-hidden shadow-lg"
               >
                 <video
-                  src={`/videos/p_testimonial${item}.mp4`}
+                  src={`/videos/${t.file}.mp4`}
                   width={300}
                   height={400}
                   className="w-full h-64 object-cover bg-gray-200"
                   controls
                   preload="metadata"
-                  poster={`/videos/p_testimonial${item}_poster.png`} // Optional: add poster image
+                  poster={`/videos/${t.file}_poster.png`}
                 >
                   Your browser does not support the video tag.
                 </video>
                 <div className="p-4">
-                  <h3 className="text-pink-400 font-bold">Brand Name</h3>
+                  <h3 className="text-pink-400 font-bold">{t.name}</h3>
                   <p className="text-gray-300 text-sm">
                     Product review and testimonial
                   </p>
