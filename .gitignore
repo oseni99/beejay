@@ -12,7 +12,7 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# Local env files
+# Local env filesis 
 .env.local
 .env.development.local
 .env.test.local
@@ -47,3 +47,5 @@ coverage/
 
 # Optional OS swap / swapfiles
 *~
+
+pnpm-lock.yaml
