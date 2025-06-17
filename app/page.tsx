@@ -457,7 +457,7 @@ export default function Home() {
                   <Mail className="text-pink-500 mr-4" size={24} />
                   <div>
                     <p className="text-gray-400 text-sm">EMAIL</p>
-                    <p className="text-white">adebolajiadeye@gmail.com</p>
+                    <p className="text-white">adebolajiadeyeye@gmail.com</p>
                   </div>
                 </div>
                 <div>
